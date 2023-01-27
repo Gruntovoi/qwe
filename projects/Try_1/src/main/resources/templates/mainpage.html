@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HEllo</title>
+</head>
+<body>
+<div th:each="userModel : ${userModel}">
+    <a href="/registration">Регистрация</a>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Password</th>
+        </tr>
+        <tr><td th:text="${userModel.getId}"></td></tr><tr><td><a href th:text="${userModel.getUsername}">user</a></td></tr><tr><td><a th:text="${userModel.getUserpassword}">password</a></td></tr>
+    </table>
+</div>
+</body>
+</html>
